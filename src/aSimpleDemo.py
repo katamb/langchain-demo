@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cwe_ids = ["CWE-23", "CWE-36"]
 
     prompt = PromptTemplate.from_template(template)  # Create template object
-    # temp: between 0 and 1, the bigger the number, the more creative the LLM, models
+    # temp: between 0 and 1, the bigger the number, the more creative the LLM
     llm = ChatOpenAI(temperature=0, model_name="gpt-4-0125-preview")  # Define which LLM to use
     chain = LLMChain(llm=llm, prompt=prompt)  # Bind prompt with LLM model
     for cwe_id in cwe_ids:
